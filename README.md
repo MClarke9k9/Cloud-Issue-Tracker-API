@@ -12,6 +12,7 @@ Portfolio-ready issue tracking API built with TypeScript, Express, Prisma, Postg
 - Swagger docs at `http://localhost:4000/docs`
 - Docker Compose local stack
 - GitHub Actions CI with PostgreSQL integration tests and Docker build validation
+- Render blueprint for GitHub-connected deployment
 
 ## Quick Start
 
@@ -19,7 +20,7 @@ Portfolio-ready issue tracking API built with TypeScript, Express, Prisma, Postg
 cp .env.example .env
 npm install
 npm run prisma:generate
-npm run prisma:push
+npm run prisma:migrate
 npm run db:seed
 npm run dev
 ```
@@ -48,7 +49,11 @@ npm run build
 
 Integration tests expect a PostgreSQL database. The GitHub Actions workflow starts one automatically.
 
-For long-term production-style migration history, run `npm run prisma:migrate` after your database is available and commit the generated `prisma/migrations` folder.
+## Deployment
+
+This repo includes `render.yaml` for a GitHub-connected Render deployment with a managed PostgreSQL database.
+
+See [Deployment](docs/deployment.md).
 
 ## Demo Users
 
@@ -64,3 +69,4 @@ See:
 - [Architecture](docs/architecture.md)
 - [API Examples](docs/api-examples.md)
 - [CI/CD Notes](docs/ci-cd.md)
+- [Deployment](docs/deployment.md)

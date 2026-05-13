@@ -51,7 +51,7 @@ jobs:
         run: npm run prisma:validate
 
       - name: Apply database migrations
-        run: npm run prisma:push
+        run: npm run prisma:deploy
 
       - name: Lint
         run: npm run lint

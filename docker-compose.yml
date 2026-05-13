@@ -28,7 +28,7 @@ services:
       JWT_EXPIRES_IN: 1d
     ports:
       - "4000:4000"
-    command: sh -c "npx prisma db push && node dist/src/server.js"
+    command: sh -c "npx prisma migrate deploy && node dist/src/server.js"
 
 volumes:
   postgres-data:
