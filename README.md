@@ -1,6 +1,6 @@
 # Cloud Issue Tracker API
 
-Portfolio-ready issue tracking API built with TypeScript, Express, Prisma, PostgreSQL, Docker, and GitHub Actions CI.
+This is issue tracking API built with TypeScript, Express, Prisma, PostgreSQL, Docker, and GitHub Actions CI.
 
 ## Features
 
